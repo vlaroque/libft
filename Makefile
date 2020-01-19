@@ -6,7 +6,7 @@
 #    By: vlaroque <vlaroque@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/13 13:25:30 by vlaroque          #+#    #+#              #
-#    Updated: 2018/12/12 16:43:02 by vlaroque         ###   ########.fr        #
+#    Updated: 2020/01/19 19:55:34 by vlaroque         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,6 +81,7 @@ SRC =	ft_memset.c \
 		ft_countwords.c \
 		ft_power.c \
 		ft_sqrt.c \
+		op_bzero.c\
 		get_next_line.c
 
 OBJ = $(SRC:.c=.o)
