@@ -6,7 +6,7 @@
 /*   By: vlaroque <vlaroque@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 13:13:21 by vlaroque          #+#    #+#             */
-/*   Updated: 2018/12/06 09:25:31 by vlaroque         ###   ########.fr       */
+/*   Updated: 2020/01/19 20:01:30 by vlaroque         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,4 +87,5 @@ size_t	ft_countwords(char const *s, char c);
 int		ft_power(int nbr, int pwr);
 int		ft_sqrt(int nbr);
 int		get_next_line(const int fd, char **line);
+void	op_bzero(void *s, size_t n);
 #endif
