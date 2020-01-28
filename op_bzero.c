@@ -12,7 +12,7 @@
 
 #include <string.h>
 
-void	ft_bzero(void *s, size_t n)
+void	op_bzero(void *s, size_t n)
 {
 	while (n >= 16)
 	{
