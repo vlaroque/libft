@@ -22,12 +22,10 @@ static int	nothing(char c)
 char		*ft_strtrim(char const *s)
 {
 	size_t	i;
-	size_t	j;
 	int		len;
 	char	*str;
 
 	i = 0;
-	j = 0;
 	if (s == NULL)
 		return (NULL);
 	if (!(len = ft_strlen(s)))
