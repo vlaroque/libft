@@ -86,6 +86,7 @@ SRC =	ft_memset.c \
 
 
 INCLUDES_DIR = includes
+SRC_DIR = src
 
 PUBLIC_HEADER = $(INCLUDES_DIR)/libft.h
 
@@ -101,7 +102,7 @@ $(NAME): $(OBJ) $(INCLUDES_DIR)/libft.h
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
-$(OBJECT_DIR)/%.o: %.c $(PUBLIC_HEADER) $(PRIVATE_HEADERS)
+$(OBJECT_DIR)/%.o: $(SRC_DIR)/%.c $(PUBLIC_HEADER) $(PRIVATE_HEADERS)
 	@mkdir -p $(OBJECT_DIR)
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
 
