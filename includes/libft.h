@@ -88,4 +88,5 @@ int		ft_power(int nbr, int pwr);
 int		ft_sqrt(int nbr);
 int		get_next_line(const int fd, char **line);
 void	op_bzero(void *s, size_t n);
+int		get_next_line(const int fd, char **line);
 #endif

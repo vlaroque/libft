@@ -10,10 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
 #include "libft.h"
 #include <unistd.h>
 #include <stdlib.h>
+
+# define BUFF_SIZE 100
+
+typedef struct s_buff	t_buff;
+
+struct					s_buff
+{
+	int		fd;
+	char	*buff;
+	int		buff_size;
+	t_buff	*next;
+};
 
 t_buff	*ft_fd_s_chain(int fd)
 {
