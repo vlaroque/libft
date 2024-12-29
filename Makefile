@@ -84,18 +84,29 @@ SRC =	ft_memset.c \
 		op_bzero.c\
 		get_next_line.c
 
-OBJ = $(SRC:.c=.o)
 
-INCLUDES = includes/
+INCLUDES_DIR = includes
+
+PUBLIC_HEADER = $(INCLUDES_DIR)/libft.h
+
+PRIVATE_HEADERS = 
+
+OBJECT_DIR = obj
+
+OBJ = $(addprefix $(OBJECT_DIR)/, $(SRC:.c=.o))
 
 all : $(NAME)
 
-$(NAME): $(OBJ) $(INCLUDES)libft.h
+$(NAME): $(OBJ) $(INCLUDES_DIR)/libft.h
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
+$(OBJECT_DIR)/%.o: %.c $(PUBLIC_HEADER) $(PRIVATE_HEADERS)
+	@mkdir -p $(OBJECT_DIR)
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@
+
 clean :
-	/bin/rm -f $(OBJ)
+	/bin/rm -rf $(OBJECT_DIR)
 
 fclean : clean
 	/bin/rm -f $(NAME)
